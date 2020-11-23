@@ -6,6 +6,12 @@ namespace Programming_Practice
 {
     class Song
     {
-
+        enum Genre
+        {
+            Rock,
+            Pop,
+            Dance,
+            Other
+        }
     }
 }

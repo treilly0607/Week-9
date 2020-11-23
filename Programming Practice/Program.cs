@@ -1,8 +1,8 @@
 ﻿/*================================================================================
  * Tristan Reilly
  * s00199625
- * 03/11/2020
- * CA 1 For November 20th 2020
+ * 23/11/2020
+ * Week 9 Programming Practice
  ===============================================================================*/
 
 using System;
@@ -13,7 +13,7 @@ namespace Programming_Practice
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            
         }
     }
 }
