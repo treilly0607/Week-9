@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Programming_Practice
 {
-    public class Song
+    public class Song:IComparable
     {
 
         //  Properties
@@ -30,6 +30,20 @@ namespace Programming_Practice
         public override string ToString()
         {
             return string.Format($"{Title} {Artist} {Duration} {MusicGenre}");
+        }
+
+        public int CompareTo(object other)
+        {
+            Song that = (Song)other;
+
+            int returnValue = this.Artist.CompareTo(that.Artist); // sort by artist
+
+            if (returnValue == 0)
+            {
+                returnValue = this.Title.CompareTo(that.Title); // sort by title if artist the same
+            }
+
+            return returnValue;
         }
     }
     public enum Genre // enum for genre

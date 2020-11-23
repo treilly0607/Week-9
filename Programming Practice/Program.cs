@@ -30,6 +30,12 @@ namespace Programming_Practice
             playlist.Add(s5);
 
             Display(playlist);
+            playlist.Sort();
+            Console.WriteLine();
+            Display(playlist);
+            Shuffle(playlist);
+            Console.WriteLine();
+            Display(playlist);
         }
 
         private static void Display(List<Song> playlist)
@@ -40,6 +46,21 @@ namespace Programming_Practice
             foreach (Song song in playlist)
             {
                 Console.WriteLine($"{song.Artist, -20}{song.Title, -25}{song.Duration, -10}{song.MusicGenre, -10}");
+            }
+        }
+
+        private static void Shuffle(List<Song> playlist)
+        {
+            Random r = new Random();
+            int numberOfSong = playlist.Count;
+
+            while (numberOfSong > 1)
+            {
+                numberOfSong--;
+                int randomNumber = r.Next(numberOfSong + 1);
+                Song song = playlist[randomNumber];
+                playlist[randomNumber] = playlist[numberOfSong];
+                playlist[numberOfSong] = song;
             }
         }
     }
