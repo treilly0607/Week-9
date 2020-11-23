@@ -25,7 +25,12 @@ namespace Programming_Practice
         public Song(string title, string artist) : this(title,artist,0,Genre.Other) { }
         // Default Contructors if all unknown
         public Song() : this("Unknown", "Unknown") { }
-       
+
+
+        public override string ToString()
+        {
+            return string.Format($"{Title} {Artist} {Duration} {MusicGenre}");
+        }
     }
     public enum Genre // enum for genre
     {
