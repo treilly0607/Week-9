@@ -6,6 +6,7 @@
  ===============================================================================*/
 
 using System;
+using System.Collections.Generic;
 
 namespace Programming_Practice
 {
@@ -19,6 +20,14 @@ namespace Programming_Practice
             Song s3 = new Song("CIRCLES", "POST MALONE", 3.25, Genre.Pop);
             Song s4 = new Song("RIDE IT", "REGARD", 3.37, Genre.Dance);
             Song s5 = new Song("SOUTH OF THE BORDER", "ED SHEERIN", 4.26, Genre.Pop);
+
+            // Add Song Objects To List playlist
+            List<Song> playlist = new List<Song>();
+            playlist.Add(s1);
+            playlist.Add(s2);
+            playlist.Add(s3);
+            playlist.Add(s4);
+            playlist.Add(s5);
         }
     }
 }
