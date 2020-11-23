@@ -28,6 +28,12 @@ namespace Programming_Practice
             playlist.Add(s3);
             playlist.Add(s4);
             playlist.Add(s5);
+
+            // Display Songs in playlist List
+            foreach (Song song in playlist)
+            {
+                Console.WriteLine(song);
+            }
         }
     }
 }
